@@ -12,15 +12,13 @@ var config = {
         filename: 'bundle.js',
         publicPath: '/app/'
     },
+    devtool: 'source-map',
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js?/,
+                test: /\.js?/,  
                 include: SRC_DIR,
                 loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015', 'stage-2']
-                }
             }
         ]
     }
